@@ -72,11 +72,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.0/JSON.pm
-/usr/lib/perl5/vendor_perl/5.28.0/JSON/backportPP.pm
-/usr/lib/perl5/vendor_perl/5.28.0/JSON/backportPP/Boolean.pm
-/usr/lib/perl5/vendor_perl/5.28.0/JSON/backportPP/Compat5005.pm
-/usr/lib/perl5/vendor_perl/5.28.0/JSON/backportPP/Compat5006.pm
+/usr/lib/perl5/vendor_perl/5.28.1JSON.pm
+/usr/lib/perl5/vendor_perl/5.28.1JSON/backportPP.pm
+/usr/lib/perl5/vendor_perl/5.28.1JSON/backportPP/Boolean.pm
+/usr/lib/perl5/vendor_perl/5.28.1JSON/backportPP/Compat5005.pm
+/usr/lib/perl5/vendor_perl/5.28.1JSON/backportPP/Compat5006.pm
 
 %files dev
 %defattr(-,root,root,-)
