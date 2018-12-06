@@ -4,7 +4,7 @@
 #
 Name     : perl-JSON
 Version  : 2.97001
-Release  : 4
+Release  : 5
 URL      : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-2.97001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-2.97001.tar.gz
 Summary  : 'JSON (JavaScript Object Notation) encoder/decoder'
