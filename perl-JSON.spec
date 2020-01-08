@@ -4,12 +4,13 @@
 #
 Name     : perl-JSON
 Version  : 4.02
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.02.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.02.tar.gz
-Summary  : JSON (JavaScript Object Notation) encoder/decoder
+Summary  : 'JSON (JavaScript Object Notation) encoder/decoder'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-JSON-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -36,14 +37,24 @@ Requires: perl-JSON = %{version}-%{release}
 dev components for the perl-JSON package.
 
 
+%package perl
+Summary: perl components for the perl-JSON package.
+Group: Default
+Requires: perl-JSON = %{version}-%{release}
+
+%description perl
+perl components for the perl-JSON package.
+
+
 %prep
 %setup -q -n JSON-4.02
+cd %{_builddir}/JSON-4.02
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -53,7 +64,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -73,11 +84,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/JSON.pm
-/usr/lib/perl5/vendor_perl/5.28.2/JSON/backportPP.pm
-/usr/lib/perl5/vendor_perl/5.28.2/JSON/backportPP/Boolean.pm
-/usr/lib/perl5/vendor_perl/5.28.2/JSON/backportPP/Compat5005.pm
-/usr/lib/perl5/vendor_perl/5.28.2/JSON/backportPP/Compat5006.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -86,3 +92,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/JSON::backportPP::Boolean.3
 /usr/share/man/man3/JSON::backportPP::Compat5005.3
 /usr/share/man/man3/JSON::backportPP::Compat5006.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/JSON.pm
+/usr/lib/perl5/vendor_perl/5.30.1/JSON/backportPP.pm
+/usr/lib/perl5/vendor_perl/5.30.1/JSON/backportPP/Boolean.pm
+/usr/lib/perl5/vendor_perl/5.30.1/JSON/backportPP/Compat5005.pm
+/usr/lib/perl5/vendor_perl/5.30.1/JSON/backportPP/Compat5006.pm
