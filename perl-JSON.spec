@@ -4,7 +4,7 @@
 #
 Name     : perl-JSON
 Version  : 4.03
-Release  : 16
+Release  : 17
 URL      : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.03.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.03.tar.gz
 Summary  : 'JSON (JavaScript Object Notation) encoder/decoder'
@@ -95,8 +95,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/JSON.pm
-/usr/lib/perl5/vendor_perl/5.30.3/JSON/backportPP.pm
-/usr/lib/perl5/vendor_perl/5.30.3/JSON/backportPP/Boolean.pm
-/usr/lib/perl5/vendor_perl/5.30.3/JSON/backportPP/Compat5005.pm
-/usr/lib/perl5/vendor_perl/5.30.3/JSON/backportPP/Compat5006.pm
+/usr/lib/perl5/vendor_perl/5.32.1/JSON.pm
+/usr/lib/perl5/vendor_perl/5.32.1/JSON/backportPP.pm
+/usr/lib/perl5/vendor_perl/5.32.1/JSON/backportPP/Boolean.pm
+/usr/lib/perl5/vendor_perl/5.32.1/JSON/backportPP/Compat5005.pm
+/usr/lib/perl5/vendor_perl/5.32.1/JSON/backportPP/Compat5006.pm
