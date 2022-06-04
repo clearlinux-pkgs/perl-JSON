@@ -4,7 +4,7 @@
 #
 Name     : perl-JSON
 Version  : 4.06
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.06.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.06.tar.gz
 Summary  : 'JSON (JavaScript Object Notation) encoder/decoder'
